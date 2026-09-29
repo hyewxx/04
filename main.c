@@ -1,22 +1,12 @@
 #include <stdio.h>
 
-int main (void){
+int main(void) {
+    int year;
 
-    int total_sec;
-    int min, sec;
+    printf("Input the year : ");
+    scanf("%i", &year);
 
-    // 초 입력받기
-    printf("Input the second : ");
-    scanf("%d", &total_sec);
-
-    // 나누기(/) 연산자로 분 계산
-    min = total_sec / 60;
-
-    // 나머지(%) 연산자로 초 계산
-    sec = total_sec % 60;
-
-    // 결과 출력
-    printf("the time is %d : %d\n", min, sec);
+    printf("Is the year %i the leap year? : %i\n", year, ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
 
     return 0;
 }
